@@ -1,11 +1,11 @@
-![Version Tag](https://img.shields.io/badge/Version-1.0.0-blue.svg)
-![Python Tag](https://img.shields.io/badge/Python-3-green.svg)
-![OpenCV Tag](https://img.shields.io/badge/OpenCV-4.2.0-yellow.svg)
-![PyTorch Tag](https://img.shields.io/badge/PyTorch-1.6.0+cpu-orange.svg)
-![PyGame Tag](https://img.shields.io/badge/PyGame-1.9.6-blueviolet.svg)
+![Version Tag](https://img.shields.io/badge/Version-1.0.1-blue.svg)
+[![Python Tag](https://img.shields.io/badge/Python-3-green.svg)](https://www.python.org/)
+[![OpenCV Tag](https://img.shields.io/badge/OpenCV-4.2.0-yellow.svg)](https://opencv.org/)
+[![PyTorch Tag](https://img.shields.io/badge/PyTorch-1.6.0+cpu-orange.svg)](https://pytorch.org/)
+[![PyGame Tag](https://img.shields.io/badge/PyGame-1.9.6-blueviolet.svg)](https://www.pygame.org/)
 
 
-# <img width="64" height="64" src="./.images/game_logo.png"> &nbsp; VisioNxN Sudoku - 
+# <img width="64" height="64" src="./.images/game_logo.png"> &nbsp; VisioNxN Sudoku -
 
 This project aims to solve any sudoku of N dimension, where N is a non-prime. The project uses pygame for creating the Graphical User Interface. The project is implemented in two forms -
 
@@ -14,7 +14,57 @@ This project aims to solve any sudoku of N dimension, where N is a non-prime. Th
 
 The project uses <i>[Dancing Links](https://en.wikipedia.org/wiki/Dancing_Links)</i> in the form of <i>[Algorithm X](https://en.wikipedia.org/wiki/Knuth%27s_Algorithm_X)</i> to find the solution of the Sudoku puzzle. Sudoku is a well known NP-Complete problem and Algorithm X is a means of implementing a form of greedy depth first search to find the appropriate solution. For more understanding on the Sudoku Algorithm, read [here](./Sudoku/README.md). For understanding the Image Processing approach, read [here](./Image_Processing/README.md).
 
-## Game Images - 
+## Index -
+
+- [Introduction](#--visionxn-sudoku--)
+- [Index](#index--)
+- [Installation](#installation--)
+    - [Installing Pytorch](#1--installing-pytorch)
+    - [Installing other requirements](2--installing-other-requirements)
+- [How to Play](#how-to-play--)
+- [Game Images](#game-images--)
+- [Files in the repository](#files-in-the-repository--)
+- [Bibliography](#bibliography)
+
+## Installation -
+
+##### 1.  Installing Pytorch
+
+Find the suitable pytorch release for your system [here](https://pytorch.org/get-started/locally/).
+
+![Installation Image](./.images/installation.png)
+
+In my case, this command was used -
+
+```bash
+pip install torch==1.6.0+cpu torchvision==0.7.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
+```
+
+##### 2.  Installing other requirements
+
+```bash
+pip3 install -r requirements.txt
+
+or
+
+pip install -r requirements.txt
+```
+
+## How to play -
+
+To play the game using GUI -
+
+```bash
+python3 main.py
+```
+
+To use the sudoku solver in CLI, edit the [file](./cli_main.py) according to the problem and run -
+
+```bash
+python3 cli_main.py
+```
+
+## Game Images -
 
 <p align="center">
 
@@ -101,7 +151,7 @@ The project uses <i>[Dancing Links](https://en.wikipedia.org/wiki/Dancing_Links)
 
 </p>
 
-### Files in the Repository - 
+### Files in the Repository -
 The files in the repository are :
 
 #### GUI -
@@ -163,11 +213,7 @@ This directory contains sample images of sudoku puzzles that can be used as test
 This directory contains the images for the icons and other media for the README File.
 
 #### cli_main.py
-This file can be used to solve sudoku of any dimension using CLI. To run the program -
-
-```bash
-python3 cli_main.py
-```
+This file can be used to solve sudoku of any dimension using CLI.
 
 #### game_window.py
 This file contains the class for implementing the GUI for the program.
@@ -176,11 +222,7 @@ This file contains the class for implementing the GUI for the program.
 The \_\_init__.py file is to make Python treat directories containing the file as packages.
 
 #### main.py
-This file is used as the driver code to start the program. To start the program  -
-
-```bash
-python3 main.py
-```
+This file is used as the driver code to start the program.
 
 #### README.md
 The Description file containing details about the repository. The file that you looking at right now.
@@ -188,21 +230,10 @@ The Description file containing details about the repository. The file that you 
 #### requirements.txt
 This file contains the respective packages needed to be installed. To install the respective packages, use -
 
-```bash
-pip3 install -r requirements.txt
-
-or 
-
-pip install -r requirements.txt
-```  
-
 #### sample.npy
 This file contains the default sudoku puzzle which will get loaded incase not last loaded file is found.
 
 <b>Fun Fact</b>: <i>This specific puzzle is designed to work against backtracking as a solution for sudoku and will take almost forever to solve it using backtracking.</i>
-
-
-
 
 ## Bibliography
 
@@ -213,6 +244,6 @@ This file contains the default sudoku puzzle which will get loaded incase not la
 - <b>Char74k Dataset:</b> The dataset used for training the CNN to recognize the digits can be found [here](
 http://www.ee.surrey.ac.uk/CVSSP/demos/chars74k/).
 - <b>CNN Model:</b> The Model Architecture is adapted from [here](https://www.kaggle.com/juiyangchang/cnn-with-pytorch-0-995-accuracy).
-- <b>Sudoku Solver:</b> The code for implementing Sudoku as an exact cover problem is adapted from [here](https://www.cs.mcgill.ca/~aassaf9/python/algorithm_x.html). 
+- <b>Sudoku Solver:</b> The code for implementing Sudoku as an exact cover problem is adapted from [here](https://www.cs.mcgill.ca/~aassaf9/python/algorithm_x.html).
 
 [![Developers Tag]( https://img.shields.io/badge/Developer-shashank3199-red.svg )]( https://github.com/shashank3199 )<br>
