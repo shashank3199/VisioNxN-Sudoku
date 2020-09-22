@@ -2,7 +2,7 @@
   cli_main.py           :   This file can be used to solve sudoku of any dimension using CLI.
   File created by       :   Shashank Goyal
   Last commit done by   :   Shashank Goyal
-  Last commit date      :   3rd September
+  Last commit date      :   22nd September
 """
 
 # to display time required to solve
@@ -36,28 +36,32 @@ def main():
     num_cols_sub_grid = 3
 
     try:
-        # get solution from the class
-        solution = Sudoku(matrix.copy(),
-                          box_row=num_rows_sub_grid,
-                          box_col=num_cols_sub_grid).get_solution()[0]
+        # get solution_list from the class
+        solution_list = Sudoku(matrix.copy(),
+                               box_row=num_rows_sub_grid,
+                               box_col=num_cols_sub_grid).get_solution()
         # get shape of the matrix
         rows, cols = matrix.shape
-        # iterate through rows
-        for i in range(rows):
-            # if sub grid rows are over
-            if i % num_rows_sub_grid is 0 and i != 0:
-                print('-' * (2 * (cols + num_rows_sub_grid - 1)))
-            # iterate through columns
-            for j in range(cols):
-                # if sub grid columns are over
-                if j % num_cols_sub_grid == 0 and j != 0:
-                    print(end=' | ')
-                else:
-                    print(end=' ')
-                # print solution element
-                print(solution[i, j], end='')
-            # end row
-            print()
+        # iterate through all the solutions
+        for sol_num, solution in enumerate(solution_list):
+            print("Solution Number {} -\n".format(sol_num + 1))
+            # iterate through rows
+            for i in range(rows):
+                # if sub grid rows are over
+                if i % num_rows_sub_grid is 0 and i != 0:
+                    print('-' * (2 * (cols + num_rows_sub_grid - 1)))
+                # iterate through columns
+                for j in range(cols):
+                    # if sub grid columns are over
+                    if j % num_cols_sub_grid == 0 and j != 0:
+                        print(end=' | ')
+                    else:
+                        print(end=' ')
+                    # print solution element
+                    print(solution[i, j], end='')
+                # end row
+                print()
+            print("\n")
         # time taken to solve
         print("\nSolved in {} s".format(round(time() - start, 4)))
     # Key Value Error raised if solution not possible
