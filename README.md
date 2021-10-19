@@ -14,6 +14,13 @@ This project aims to solve any sudoku of N dimension, where N is a non-prime. Th
 
 The project uses <i>[Dancing Links](https://en.wikipedia.org/wiki/Dancing_Links)</i> in the form of <i>[Algorithm X](https://en.wikipedia.org/wiki/Knuth%27s_Algorithm_X)</i> to find the solution of the Sudoku puzzle. Sudoku is a well known NP-Complete problem and Algorithm X is a means of implementing a form of greedy depth first search to find the appropriate solution. For more understanding on the Sudoku Algorithm, read [here](./Sudoku/README.md). For understanding the Image Processing approach, read [here](./Image_Processing/README.md).
 
+You can find the complete concept and implementations explained in detail at the following blog posts -
+
+- [Augmented Reality Sudoku Solver — Part I](https://medium.com/mlearning-ai/augmented-reality-sudoku-solver-part-i-8e29e59cecab?source=rss-e85e3a6012ba------2)
+- [Augmented Reality Sudoku Solver — Part II](https://medium.com/mlearning-ai/augmented-reality-sudoku-solver-part-ii-cdfc035a415c?source=rss-e85e3a6012ba------2)
+- [Augmented Reality Sudoku Solver — Part III](https://medium.com/mlearning-ai/augmented-reality-sudoku-solver-part-iii-d2370a9cbace?source=rss-e85e3a6012ba------2)
+- [Augmented Reality Sudoku Solver — Part IV](https://medium.com/mlearning-ai/augmented-reality-sudoku-solver-part-iv-65afe2231e46?source=rss-e85e3a6012ba------2)
+
 ## Index -
 
 - [Introduction](#--visionxn-sudoku--)
